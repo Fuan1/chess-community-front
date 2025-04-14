@@ -1,101 +1,101 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  /* 기본 색상 */
-  --background: #171717;
-  --background-light: #2a2a2a;
-  --foreground: #e0e0e0;
+    /* 기본 색상 */
+    --background: #171717;
+    --background-light: #2a2a2a;
+    --foreground: #e0e0e0;
 
-  /* 텍스트 색상 */
-  --text-light: #ffffff;
-  --text-normal: #e0e0e0;
-  --text-muted: #a0a0a0;
-  --text-dim: #808080;
+    /* 텍스트 색상 */
+    --text-light: #ffffff;
+    --text-normal: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --text-dim: #808080;
 
-  /* 버튼 색상 */
-  --button-primary: #30c265;
-  --button-primary-hover: #18a84d;
-  --button-primary-active: #16a34a;
+    /* 버튼 색상 */
+    --button-primary: #30c265;
+    --button-primary-hover: #18a84d;
+    --button-primary-active: #16a34a;
 
-  /* 경고 색상 */
-  --warning: #f97316;
-  --warning-light: #fb923c;
-  --warning-dark: #ea580c;
+    /* 경고 색상 */
+    --warning: #f97316;
+    --warning-light: #fb923c;
+    --warning-dark: #ea580c;
 
-  /* 테두리 색상 */
-  --border-light: #404040;
-  --border-normal: #2a2a2a;
-  --border-dark: #1a1a1a;
+    /* 테두리 색상 */
+    --border-light: #404040;
+    --border-normal: #2a2a2a;
+    --border-dark: #1a1a1a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-background-light: var(--background-light);
-  --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --color-background-light: var(--background-light);
+    --color-foreground: var(--foreground);
 
-  --color-border-light: var(--border-light);
-  --color-border-normal: var(--border-normal);
-  --color-border-dark: var(--border-dark);
+    --color-border-light: var(--border-light);
+    --color-border-normal: var(--border-normal);
+    --color-border-dark: var(--border-dark);
 
-  --color-text-light: var(--text-light);
-  --color-text-normal: var(--text-normal);
-  --color-text-muted: var(--text-muted);
-  --color-text-dim: var(--text-dim);
+    --color-text-light: var(--text-light);
+    --color-text-normal: var(--text-normal);
+    --color-text-muted: var(--text-muted);
+    --color-text-dim: var(--text-dim);
 
-  --color-button-primary: var(--button-primary);
-  --color-button-primary-hover: var(--button-primary-hover);
-  --color-button-primary-active: var(--button-primary-active);
+    --color-button-primary: var(--button-primary);
+    --color-button-primary-hover: var(--button-primary-hover);
+    --color-button-primary-active: var(--button-primary-active);
 
-  --color-warning: var(--warning);
-  --color-warning-light: var(--warning-light);
-  --color-warning-dark: var(--warning-dark);
+    --color-warning: var(--warning);
+    --color-warning-light: var(--warning-light);
+    --color-warning-dark: var(--warning-dark);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* 버튼 기본 스타일 */
 .btn {
-  background-color: var(--button-primary);
-  color: var(--text-light);
-  transition: background-color 0.2s ease;
+    background-color: var(--button-primary);
+    color: var(--text-light);
+    transition: background-color 0.2s ease;
 }
 
 .btn:hover {
-  background-color: var(--button-primary-hover);
+    background-color: var(--button-primary-hover);
 }
 
 .btn:active {
-  background-color: var(--button-primary-active);
+    background-color: var(--button-primary-active);
 }
 
 /* 경고 스타일 */
 .warning {
-  color: var(--warning);
+    color: var(--warning);
 }
 
 /* 테두리 스타일 */
 .border-light {
-  border-color: var(--border-light);
+    border-color: var(--border-light);
 }
 
 .border-normal {
-  border-color: var(--border-normal);
+    border-color: var(--border-normal);
 }
 
 .border-dark {
-  border-color: var(--border-dark);
+    border-color: var(--border-dark);
 }

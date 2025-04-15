@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -15,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
   return (
     <header
       className={cn(
-        "w-full py-2 px-4 md:px-6 border-b flex items-center justify-between",
+        "w-full h-14 py-2 px-4 md:px-6 border-b flex items-center justify-between",
         "border-border-light bg-background",
         className
       )}

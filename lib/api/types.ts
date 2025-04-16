@@ -10,7 +10,7 @@ export interface Post {
   createdAt: string;
   updatedAt: string;
   likes: number;
-  comments: number;
+  commentCount: number;
 }
 
 export interface GetPostsResponse {
@@ -18,4 +18,22 @@ export interface GetPostsResponse {
   total: number;
   page: number;
   limit: number;
+}
+
+export interface Comment {
+  id: string;
+  content: string;
+  author: {
+    id: string;
+    username: string;
+    avatar?: string;
+  };
+  createdAt: string;
+  updatedAt: string;
+  likes: number;
+  replies: number;
+}
+
+export interface PostDetail extends Omit<Post, "commentCount"> {
+  comments: Comment[];
 }

@@ -94,6 +94,38 @@ function Sidebar({ className }: SidebarProps) {
               <SidebarItem href="/community" label="Community" />
               <SidebarItem href="/learn" label="Learn" />
               <SidebarItem href="/tournaments" label="Tournaments" />
+              <SidebarItem href="/game" label="Game" />
+              <SidebarItem href="/community" label="Community" />
+              <SidebarItem href="/learn" label="Learn" />
+              <SidebarItem href="/tournaments" label="Tournaments" />
+              <SidebarItem href="/game" label="Game" />
+              <SidebarItem href="/community" label="Community" />
+              <SidebarItem href="/learn" label="Learn" />
+              <SidebarItem href="/tournaments" label="Tournaments" />
+              <SidebarItem href="/game" label="Game" />
+              <SidebarItem href="/community" label="Community" />
+              <SidebarItem href="/learn" label="Learn" />
+              <SidebarItem href="/tournaments" label="Tournaments" />
+              <SidebarItem href="/game" label="Game" />
+              <SidebarItem href="/community" label="Community" />
+              <SidebarItem href="/learn" label="Learn" />
+              <SidebarItem href="/tournaments" label="Tournaments" />
+              <SidebarItem href="/game" label="Game" />
+              <SidebarItem href="/community" label="Community" />
+              <SidebarItem href="/learn" label="Learn" />
+              <SidebarItem href="/tournaments" label="Tournaments" />
+              <SidebarItem href="/game" label="Game" />
+              <SidebarItem href="/community" label="Community" />
+              <SidebarItem href="/learn" label="Learn" />
+              <SidebarItem href="/tournaments" label="Tournaments" />
+              <SidebarItem href="/game" label="Game" />
+              <SidebarItem href="/community" label="Community" />
+              <SidebarItem href="/learn" label="Learn" />
+              <SidebarItem href="/tournaments" label="Tournaments" />
+              <SidebarItem href="/game" label="Game" />
+              <SidebarItem href="/community" label="Community" />
+              <SidebarItem href="/learn" label="Learn" />
+              <SidebarItem href="/tournaments" label="Tournaments" />
             </div>
           </SidebarSection>
 

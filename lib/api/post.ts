@@ -18,6 +18,7 @@ const mockPosts: Post[] = Array.from({ length: 20 }, (_, i) => ({
   likes: Math.floor(Math.random() * 100),
   comments: Math.floor(Math.random() * 30),
   revalidate: 60,
+  commentCount: Math.floor(Math.random() * 100),
 }));
 
 // 목업 데이터 반환 함수
@@ -42,20 +43,20 @@ export function getMockPostById(id: string): Post | undefined {
 // 목업 데이터 생성 함수
 function generateMockPosts(count: number): Post[] {
   return Array.from({ length: count }, (_, i) => ({
-    id: `post-${i + 1}`,
+    id: `post-${i}`,
     title: `테스트 게시글 ${i + 1}`,
-    content: `이것은 테스트 게시글 ${
-      i + 1
-    }의 내용입니다. 실제 API가 준비되면 이 부분은 실제 데이터로 대체될 예정입니다.`,
+    content: `이것은 ${i + 1}번째 게시글의 내용입니다.`,
     author: {
-      id: `user-${i + 1}`,
-      username: `사용자${i + 1}`,
-      avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${i + 1}`,
+      id: `user-${i}`,
+      username: `user${i}`,
+      avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${i}`,
     },
     createdAt: new Date(Date.now() - i * 1000 * 60 * 60).toISOString(),
     updatedAt: new Date(Date.now() - i * 1000 * 60 * 60).toISOString(),
-    likes: Math.floor(Math.random() * 100),
-    comments: Math.floor(Math.random() * 50),
+    likes: Math.floor(Math.random() * 1000),
+    comments: Math.floor(Math.random() * 30),
+    revalidate: 60,
+    commentCount: Math.floor(Math.random() * 100),
   }));
 }
 
@@ -66,9 +67,6 @@ export async function getPosts(
   page = 1,
   limit = 10
 ): Promise<GetPostsResponse> {
-  // 2초 지연
-  await delay(500);
-
   // 실제 API 호출 대신 목업 데이터 사용
   const posts = generateMockPosts(limit);
 
@@ -81,10 +79,26 @@ export async function getPosts(
 }
 
 export async function getPostById(id: string) {
-  // 2초 지연
-  await delay(2000);
-
   // 실제 API 호출 대신 목업 데이터 사용
-  const posts = generateMockPosts(1);
-  return posts[0];
+  const post = generateMockPosts(1)[0];
+
+  // 댓글 목업 데이터 생성
+  const comments = Array.from({ length: 5 }, (_, i) => ({
+    id: `comment-${i}`,
+    content: `이것은 ${i + 1}번째 댓글입니다.`,
+    author: {
+      id: `user-${i}`,
+      username: `user${i}`,
+      avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${i}`,
+    },
+    createdAt: new Date(Date.now() - i * 1000 * 60 * 60).toISOString(),
+    updatedAt: new Date(Date.now() - i * 1000 * 60 * 60).toISOString(),
+    likes: Math.floor(Math.random() * 100),
+    replies: Math.floor(Math.random() * 10),
+  }));
+
+  return {
+    ...post,
+    comments,
+  };
 }

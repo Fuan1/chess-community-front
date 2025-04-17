@@ -1,16 +1,16 @@
 export const formatDate = (date: Date | string | number): string => {
     const d = new Date(date);
-    return d.toLocaleDateString('ko-KR', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
+    return d.toLocaleDateString("ko-KR", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
     });
 };
 
 export const formatCurrency = (amount: number): string => {
-    return new Intl.NumberFormat('ko-KR', {
-        style: 'currency',
-        currency: 'KRW',
+    return new Intl.NumberFormat("ko-KR", {
+        style: "currency",
+        currency: "KRW",
     }).format(amount);
 };
 

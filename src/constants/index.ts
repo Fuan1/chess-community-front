@@ -1,14 +1,14 @@
 export const API_ROUTES = {
-    USERS: '/users',
-    POSTS: '/posts',
-    COMMENTS: '/comments',
+    USERS: "/users",
+    POSTS: "/posts",
+    COMMENTS: "/comments",
 };
 
 export const PAGE_ROUTES = {
-    HOME: '/',
-    ABOUT: '/about',
-    PROFILE: '/profile',
-    SETTINGS: '/settings',
+    HOME: "/",
+    ABOUT: "/about",
+    PROFILE: "/profile",
+    SETTINGS: "/settings",
 };
 
 export const PAGINATION = {

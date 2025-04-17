@@ -1,10 +1,15 @@
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
+import { AppSidebar } from '@/components/app-sidebar';
+import { SiteHeader } from '@/components/site-header';
+import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
+
+export const iframeHeight = '800px';
+
+export const description = 'A sidebar with a header and a search form.';
 
 export default function Home() {
     return (
-        <div className="">
-            <Button variant="outline">Click me</Button>
+        <div>
+            <div></div>
         </div>
     );
 }
